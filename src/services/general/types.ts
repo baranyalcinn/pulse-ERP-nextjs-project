@@ -204,7 +204,7 @@ export interface BSMGRPLEWCMOPR {
 }
 
 // İş Merkezi Açıklamaları
-export interface BSMGRWCMTEXT {
+export interface BSMGRPLEWCMTEXT {
   comcode: string;
   wcmdoctype: string;
   wcmdocnum: string;

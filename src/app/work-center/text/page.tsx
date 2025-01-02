@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { Button } from '@/components/ui/Button';
-import { BSMGRWCMTEXT } from '@/services/general/types';
+import { BSMGRPLEWCMTEXT } from '@/services/general/types';
 import { toast } from 'react-hot-toast';
 import { Input } from '@/components/ui/Input';
 import { supabase } from '@/lib/supabase';
@@ -12,12 +12,12 @@ import { SearchBar } from '@/components/ui/SearchBar';
 import { FiPlus, FiFilter } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';
 
-type FormData = BSMGRWCMTEXT;
+type FormData = BSMGRPLEWCMTEXT;
 
 export default function WorkCenterTextPage() {
   const router = useRouter();
-  const [data, setData] = React.useState<BSMGRWCMTEXT[]>([]);
-  const [filteredData, setFilteredData] = useState<BSMGRWCMTEXT[]>([]);
+  const [data, setData] = React.useState<BSMGRPLEWCMTEXT[]>([]);
+  const [filteredData, setFilteredData] = useState<BSMGRPLEWCMTEXT[]>([]);
   const [isLoading, setIsLoading] = React.useState(false);
   const [editingId, setEditingId] = React.useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -44,7 +44,7 @@ export default function WorkCenterTextPage() {
     try {
       setIsLoading(true);
       const { data: texts, error } = await supabase
-        .from('bsmgrwcmtext')
+        .from('bsmgrplewcmtext')
         .select('*')
         .order('wcmdocnum');
         
@@ -106,7 +106,7 @@ export default function WorkCenterTextPage() {
 
       if (editingId) {
         const { error } = await supabase
-          .from('bsmgrwcmtext')
+          .from('bsmgrplewcmtext')
           .update(formData)
           .eq('wcmdocnum', editingId)
           .eq('comcode', formData.comcode)
@@ -118,7 +118,7 @@ export default function WorkCenterTextPage() {
       } else {
         // Önce aynı kayıt var mı kontrol et
         const { data: existing } = await supabase
-          .from('bsmgrwcmtext')
+          .from('bsmgrplewcmtext')
           .select('*')
           .eq('comcode', formData.comcode)
           .eq('wcmdoctype', formData.wcmdoctype)
@@ -132,7 +132,7 @@ export default function WorkCenterTextPage() {
         }
 
         const { error } = await supabase
-          .from('bsmgrwcmtext')
+          .from('bsmgrplewcmtext')
           .insert(formData);
           
         if (error) throw error;
@@ -151,7 +151,7 @@ export default function WorkCenterTextPage() {
   };
 
   // Düzenleme
-  function handleEdit(item: BSMGRWCMTEXT) {
+  function handleEdit(item: BSMGRPLEWCMTEXT) {
     setEditingId(item.wcmdocnum);
     setValue('comcode', item.comcode);
     setValue('wcmdoctype', item.wcmdoctype);
@@ -164,7 +164,7 @@ export default function WorkCenterTextPage() {
   }
 
   // Silme
-  async function handleDelete(item: BSMGRWCMTEXT) {
+  async function handleDelete(item: BSMGRPLEWCMTEXT) {
     if (!window.confirm('Silmek istediğinize emin misiniz?')) return;
 
     try {
