@@ -170,7 +170,7 @@ export default function WorkCenterTextPage() {
     try {
       setIsLoading(true);
       const { error } = await supabase
-        .from('bsmgrwcmtext')
+        .from('bsmgrplewcmtext')
         .delete()
         .eq('wcmdocnum', item.wcmdocnum)
         .eq('comcode', item.comcode)
