@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Operasyon Yönetim Sistemi
 
-First, run the development server:
+## 🚀 Proje Hakkında
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Bu proje, şirket içi operasyonların yönetimini kolaylaştırmak amacıyla geliştirilmiş modern bir web uygulamasıdır. Next.js 14, TypeScript, Tailwind CSS, Supabase ve PostgreSQL kullanılarak inşa edilmiştir.
+
+## 🔥 Özellikler
+
+- 🔐 **Güvenli Kimlik Doğrulama Sistemi:** Kullanıcıların güvenli bir şekilde sisteme erişimini sağlar.
+- 📊 **Operasyon İstatistikleri Dashboard:** Operasyonel verilerin görselleştirilmesi ve analizi için etkileşimli paneller sunar.
+- 📋 **Operasyon Türleri Yönetimi:** Farklı operasyon türlerinin tanımlanması ve yönetilmesine olanak tanır.
+- 👥 **Kullanıcı Yönetimi:** Kullanıcıların eklenmesi, düzenlenmesi ve yetkilendirilmesi işlemlerini destekler.
+- 🌓 **Koyu/Açık Tema Desteği:** Kullanıcı tercihine göre tema seçimi yapabilme imkanı sunar.
+- 📱 **Responsive Tasarım:** Farklı cihaz ve ekran boyutlarına uyumlu tasarım ile mobil deneyimi optimize eder.
+
+## 🛠️ Teknolojiler
+
+- **Frontend Framework:** [Next.js 14](https://nextjs.org/)
+- **Programlama Dili:** [TypeScript](https://www.typescriptlang.org/)
+- **Stil:** [Tailwind CSS](https://tailwindcss.com/)
+- **State Yönetimi:** React Context API
+- **Form Yönetimi:** [React Hook Form](https://react-hook-form.com/)
+- **Validasyon:** [Zod](https://zod.dev/)
+- **UI Bileşenleri:** [Shadcn/ui](https://ui.shadcn.dev/)
+- **İkonlar:** [React Icons](https://react-icons.github.io/react-icons/)
+- **HTTP İstemcisi:** [Axios](https://axios-http.com/)
+- **Kimlik Doğrulama:** JWT & Çerezler
+- **Backend Hizmeti:** [Supabase](https://supabase.com/)
+- **Veritabanı:** [PostgreSQL](https://www.postgresql.org/)
+
+## 📦 Kurulum
+
+1. **Projeyi klonlayın:**
+
+   ```bash
+   git clone https://github.com/kullaniciadi/proje-adi.git
+   ```
+
+2. **Bağımlılıkları yükleyin:**
+
+   ```bash
+   npm install
+   # veya
+   yarn install
+   ```
+
+3. **Geliştirme sunucusunu başlatın:**
+
+   ```bash
+   npm run dev
+   # veya
+   yarn dev
+   ```
+
+   Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini ziyaret edin.
+
+## 🌐 Canlı Demo
+
+[https://pulse-erp-nextjs-project.vercel.app/auth/login](https://pulse-erp-nextjs-project.vercel.app/auth/login)
+
+## 📁 Proje Yapısı
+
+```plaintext
+src/
+├── app/          # Next.js 14 uygulama yönlendiricisi
+├── components/   # Yeniden kullanılabilir bileşenler
+│   ├── ui/       # Temel UI bileşenleri
+│   └── shared/   # Paylaşılan bileşenler
+├── contexts/     # React Context dosyaları
+├── hooks/        # Özel React Hook'ları
+├── lib/          # Yardımcı fonksiyonlar
+├── services/     # API servisleri
+├── styles/       # Global stil dosyaları
+└── types/        # TypeScript tip tanımlamaları
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔒 Ortam Değişkenleri
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Projeyi çalıştırmak için `.env.local` dosyanızda aşağıdaki ortam değişkenlerini tanımlamanız gerekmektedir:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
 
-## Learn More
+Bu bilgileri Supabase projenizin ayarlarından temin edebilirsiniz. ([supabase.com](https://supabase.com/docs/guides/getting-started/quickstarts/nextjs?utm_source=chatgpt.com))
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Dağıtım
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Bu proje Vercel üzerinde barındırılmaktadır. `main` branch'ine yapılan her push işlemi otomatik olarak production ortamına dağıtılır.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧪 Test
 
-## Deploy on Vercel
+- **Birim Testleri:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ```bash
+  npm run test
+  ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Uçtan Uca (E2E) Testleri:**
+
+  ```bash
+  npm run test:e2e
+  ```
+
+## 📝 API Dokümantasyonu
+
+API endpoint'leri ve kullanımları hakkında detaylı bilgi için [API.md](./API.md) dosyasını inceleyebilirsiniz.
+
+## 🤝 Katkıda Bulunma
+
+1. Bu repository'yi fork edin.
+2. Özellik branch'inizi oluşturun (`git checkout -b feature/AmazingFeature`).
+3. Değişikliklerinizi commit edin (`git commit -m 'Add some AmazingFeature'`).
+4. Branch'inize push edin (`git push origin feature/AmazingFeature`).
+5. Bir Pull Request oluşturun.
+
+## 📜 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](./LICENSE) dosyasını inceleyebilirsiniz.
+
+## 👥 İletişim
+
+Proje Sahibi - [Oğuzhan Yavaş](https://www.linkedin.com/in/oguzhanyavass/)
+
+Proje Linki: [Demo Inceleme Web Sitesi Linki](https://pulse-erp-nextjs-project.vercel.app/)
