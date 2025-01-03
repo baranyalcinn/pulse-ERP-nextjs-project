@@ -104,10 +104,6 @@ Bu proje Vercel üzerinde barındırılmaktadır. `main` branch'ine yapılan her
   npm run test:e2e
   ```
 
-## 📝 API Dokümantasyonu
-
-API endpoint'leri ve kullanımları hakkında detaylı bilgi için [API.md](./API.md) dosyasını inceleyebilirsiniz.
-
 ## 🤝 Katkıda Bulunma
 
 1. Bu repository'yi fork edin.
