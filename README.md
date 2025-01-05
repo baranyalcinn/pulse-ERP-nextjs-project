@@ -121,3 +121,5 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](./LI
 Proje Sahibi - [Oğuzhan Yavaş](https://www.linkedin.com/in/oguzhanyavass/)
 
 Proje Linki: [Demo Inceleme Web Sitesi Linki](https://pulse-erp-nextjs-project.vercel.app/)
+
+Giriş Bilgileri: kullanıcı adı: PulseERP - şifre: 123123
