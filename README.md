@@ -119,6 +119,7 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](./LI
 ## 👥 İletişim
 
 Proje Sahibi - [Oğuzhan Yavaş](https://www.linkedin.com/in/oguzhanyavass/)
+             - [Baran Yalçın](https://www.linkedin.com/in/baranyalcinn/)
 
 Proje Linki: [Demo Inceleme Web Sitesi Linki](https://pulse-erp-nextjs-project.vercel.app/)
 
